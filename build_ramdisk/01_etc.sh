@@ -102,6 +102,6 @@ fi
 
 if [ ${DIST} == "jessie" ]; then
 	sed -e "s|^PermitRootLogin without-password|PermitRootLogin yes|" \
-		< ${DITDIR}/etc/ssh/sshd_config > /tmp/sshd_config.new
+		< ${DISTDIR}/etc/ssh/sshd_config > /tmp/sshd_config.new
 	mv -f /tmp/sshd_config.new ${DISTDIR}/etc/ssh/sshd_config
 fi
